@@ -1,4 +1,4 @@
-# Kyber Crystal Project <sub><sup><sub><sup><sub><sup> (2022Q1 Saratov Internship Capstone Project) </sup></sub></sup></sub></sup></sub>
+# SWAPI Ember 
 
 The goal of this project is to create an adaptive site using SWAPI.
 
