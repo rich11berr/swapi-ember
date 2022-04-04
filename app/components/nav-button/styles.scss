@@ -1,0 +1,17 @@
+@import 'app/styles/variables.scss';
+
+.nav-button {
+  color: $orange;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $grey;
+  text-align: center;
+  padding: 0.7rem;
+  transition: all 0.33s ease-in-out;
+  background-color: transparent;
+  display: block;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

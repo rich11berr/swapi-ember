@@ -1,0 +1,78 @@
+.planet_info {
+  flex: 1 1 auto;
+  margin-left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: lighten($grey, 100);
+
+  .left_side {
+    .title {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 40px;
+      text-align: center;
+      color: $yellow;
+    }
+
+    .image {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      background-color: $orange;
+    }
+  }
+
+  .right_side {
+    .properties {
+      display: grid;
+      grid-template: repeat(7, 1fr) / repeat(2, 1fr);
+      column-gap: 3rem;
+      row-gap: 0.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+
+      .action {
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: filter 0.2s linear;
+
+        &:hover {
+          filter: brightness(70%);
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .planet_info {
+    flex-direction: column;
+
+    .left_side {
+      margin-bottom: 3rem;
+
+      .image {
+        height: 200px;
+        width: 200px;
+      }
+    }
+
+    .right_side {
+      .properties {
+        column-gap: 1rem;
+        row-gap: 0.3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

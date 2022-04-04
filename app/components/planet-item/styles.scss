@@ -1,0 +1,48 @@
+@import 'app/styles/variables.scss';
+
+.planet-item {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid $grey;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $black;
+
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 0.25rem;
+
+  .description {
+    color: $grey;
+
+    .value {
+      color: $yellow;
+    }
+  }
+
+  .header {
+    color: $orange;
+    grid-column: 1/4;
+  }
+
+  .climate {
+    grid-column: 1/4;
+  }
+
+  .svg {
+    justify-self: center;
+
+    &:hover :global {
+      filter: invert(20%) sepia(80%) saturate(374%) hue-rotate(332deg) brightness(105%) contrast(101%);
+    }
+  }
+
+  .container {
+    grid-column-start: 3;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-self: center;
+  }
+}

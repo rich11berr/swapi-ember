@@ -1,0 +1,23 @@
+{{page-title "Planet"}}
+
+<main class="planet_info">
+  <div class="left_side">
+    <h3 class="title">{{this.model.name}}</h3>
+    <img src="/assets/{{this.planetImage}}.jpeg" alt="planet-image" class="image" />
+  </div>
+  <div class="right_side">
+    <div class="properties">
+      {{#each this.planetInfoProperties as |item|}}
+        <div class="property">{{item.property}}</div>
+        <div class="property value">{{item.value}}</div>
+      {{/each}}
+    </div>
+    {{#each this.model.residents as |person|}}
+      <div>{{person.name}}</div>
+    {{/each}}
+    <div class="actions">
+      <img src="/assets/community.svg" alt="group" class="action">
+      <img src="/assets/edit.svg" alt="edit" class="action">
+    </div>
+  </div>
+</main>

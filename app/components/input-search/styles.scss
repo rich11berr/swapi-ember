@@ -1,0 +1,44 @@
+@import 'app/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  .input {
+    border: 1px solid $grey;
+    outline: none;
+    background-color: transparent;
+    color: $yellow;
+    padding: 0 0.25rem;
+  }
+
+  .button {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid $grey;
+    border-left: none;
+    color: $orange;
+    cursor: pointer;
+
+    &:hover :global {
+      animation: neon-red 1.5s ease-in-out infinite alternate;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    width: 200px;
+
+    .button {
+      border: 1px solid $grey;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    width: 80%;
+  }
+}

@@ -1,0 +1,26 @@
+{{page-title 'Planets'}}
+
+<main class='main'>
+  <div class='sort-container'>
+    <Dropdown>Sort by: Name</Dropdown>
+    <Dropdown>Climate: Temperature</Dropdown>
+    <Dropdown>Water</Dropdown>
+    <InputSearch
+      @type='text'
+      @button-text='Search'
+      @placeholder='Type here...'
+    />
+  </div>
+  <div class='planets-container'>
+    {{#each this.model as |item|}}
+      <PlanetItem
+        @planetId={{item.id}}
+        @name={{item.name}}
+        @climate={{item.climate}}
+        @gravity={{item.gravity}}
+        @population={{item.population}}
+        @water={{item.surfaceWater}}
+      />
+    {{/each}}
+  </div>
+</main>

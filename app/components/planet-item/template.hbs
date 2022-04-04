@@ -1,0 +1,14 @@
+<LinkTo @route="planet" @model={{@planetId}} local-class='planet-item'>
+  <h3 local-class='header'>{{@name}}</h3>
+  <p local-class='description climate'>Climate:<span local-class="value">{{@climate}}</span></p>
+  <p local-class='description'>Gravity </p>
+  <p local-class='description'>Population </p>
+  <p local-class='description'>Water </p>
+  <p local-class='description'><span local-class="value">{{@gravity}}</span></p>
+  <p local-class='description'><span local-class="value">{{@population}}</span></p>
+  <p local-class='description'><span local-class="value">{{@water}}</span></p>
+  <div local-class='container'>
+    <img src='/assets/pen.svg' alt='pen' local-class='svg'/>
+    <img src='/assets/trash.svg' alt='delete' local-class='svg'/>
+  </div>
+</LinkTo>

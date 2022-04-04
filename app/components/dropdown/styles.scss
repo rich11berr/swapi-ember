@@ -1,0 +1,33 @@
+@import 'app/styles/variables.scss';
+
+.dropdown {
+  width: fit-content;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+
+  color: $yellow;
+  border: 1px solid $grey;
+
+  cursor: pointer;
+
+  .drop-icon :global {
+    transform: scaleY(-1);
+    animation: neon-red 1.5s ease-in-out infinite alternate;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .dropdown {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .dropdown {
+    flex-direction: column;
+    font-size: 0.7rem;
+    width: 80%;
+  }
+}
